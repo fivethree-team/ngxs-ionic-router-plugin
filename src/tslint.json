@@ -1,0 +1,17 @@
+{
+  "extends": "../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ionic-router-plugin",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ionic-router-plugin",
+      "kebab-case"
+    ]
+  }
+}

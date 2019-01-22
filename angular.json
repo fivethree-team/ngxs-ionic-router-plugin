@@ -1,12 +1,52 @@
 {
   "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
-  "defaultProject": "app",
+  "defaultProject": "ionic-router-plugin",
   "newProjectRoot": "projects",
   "projects": {
-    "app": {
+    "ionic-router-plugin": {
       "root": "",
       "sourceRoot": "src",
+      "projectType": "library",
+      "prefix": "ionic-router-plugin",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "src/tsconfig.lib.json",
+            "project": "src/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "src/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.lib.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "app": {
+      "root": "",
+      "sourceRoot": "integration",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -15,14 +55,14 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "www",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "index": "integration/index.html",
+            "main": "integration/main.ts",
+            "polyfills": "integration/polyfills.ts",
+            "tsConfig": "integration/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "integration/assets",
                 "output": "assets"
               },
               {
@@ -33,10 +73,10 @@
             ],
             "styles": [
               {
-                "input": "src/theme/variables.scss"
+                "input": "integration/theme/variables.scss"
               },
               {
-                "input": "src/global.scss"
+                "input": "integration/global.scss"
               }
             ],
             "scripts": []
@@ -45,8 +85,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "integration/environments/environment.ts",
+                  "with": "integration/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -94,21 +134,21 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "integration/test.ts",
+            "polyfills": "integration/polyfills.ts",
+            "tsConfig": "integration/tsconfig.spec.json",
+            "karmaConfig": "integration/karma.conf.js",
             "styles": [],
             "scripts": [],
             "assets": [
               {
                 "glob": "favicon.ico",
-                "input": "src/",
+                "input": "integration/",
                 "output": "/"
               },
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "integration/assets",
                 "output": "/assets"
               }
             ]
@@ -123,8 +163,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "integration/tsconfig.app.json",
+              "integration/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "ionic-cordova-build": {
@@ -173,7 +218,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

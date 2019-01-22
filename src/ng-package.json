@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../dist/@fivethree/ionic-router-plugin",
+  "lib": {
+    "flatModuleFile": "fivethree-ionic-router-plugin",
+    "entryFile": "public_api.ts",
+    "umdModuleIds": {
+      "@ngxs/store": "ngxs-store"
+    }
+  }
+}

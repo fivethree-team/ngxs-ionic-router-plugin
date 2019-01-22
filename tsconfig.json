@@ -16,6 +16,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@fivethree/ionic-router-plugin": [
+        "dist/@fivethree/ionic-router-plugin"
+      ]
+    }
   }
 }
