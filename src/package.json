@@ -1,6 +1,15 @@
 {
   "name": "@fivethree/ionic-router-plugin",
   "version": "0.0.1",
+  "description": "NGXS Ionic Router Plugin",
+  "keywords": [
+    "fivethree",
+    "ngxs",
+    "ionic",
+    "angular",
+    "navigation",
+    "plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fivethree-team/ngxs-ionic-router-plugin.git"
