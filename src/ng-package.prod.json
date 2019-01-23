@@ -3,8 +3,9 @@
   "dest": "../dist/@fivethree/ionic-router-plugin",
   "lib": {
     "flatModuleFile": "fivethree-ionic-router-plugin",
-    "entryFile": "public_api.ts",
+    "entryFile": "lib/public_api.ts",
     "umdModuleIds": {
+      "@ionic/angular": "ionic-angular",
       "@ngxs/store": "ngxs-store"
     }
   }

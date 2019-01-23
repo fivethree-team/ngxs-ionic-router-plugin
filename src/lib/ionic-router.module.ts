@@ -4,10 +4,10 @@ import { IonicRouterState } from './ionic-router.state';
 
 // NOTE: Must mark as `dynamic` due to
 // https://github.com/dherges/ng-packagr/issues/767
-export const NgxsModuleRouterState = NgxsModule.forFeature([IonicRouterState]);
+// export const NgxsModuleRouterState = NgxsModule.forFeature([IonicRouterState]);
 
 @NgModule({
-    imports: [NgxsModuleRouterState]
+    imports: [NgxsModule.forFeature([IonicRouterState])]
 })
 export class NgxsIonicRouterPluginModule {
     static forRoot(): ModuleWithProviders {
