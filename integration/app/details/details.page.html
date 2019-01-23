@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Page C</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button (click)="onNavigateRootClick()">
+    Navigate Root
+  </ion-button>
+  <ion-button (click)="onNavigateBackwardClick()">
+    Navigate Backward
+  </ion-button>
+  <ion-button (click)="onNavigateBackClick()">
+    Navigate Back
+  </ion-button>
+</ion-content>

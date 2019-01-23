@@ -13,13 +13,13 @@ import {
 } from './ionic-router.actions';
 
 export interface IonicRouterStateModel {
-    state?: any;
+    path?: any;
 }
 
 @State<IonicRouterStateModel>({
     name: 'ionicRouter',
     defaults: {
-        state: undefined
+        path: undefined
     }
 })
 export class IonicRouterState {
@@ -29,24 +29,24 @@ export class IonicRouterState {
     @Action(NavigateRoot)
     navigateRoot(context: StateContext<IonicRouterStateModel>, action: NavigateRoot) {
         this.ngZone.run(() => this.navCtrl.navigateRoot(action.path, action.options));
-        context.setState({ state: action });
+        context.setState({ path: action.path });
     }
 
     @Action(NavigateForward)
     navigateForward(context: StateContext<IonicRouterStateModel>, action: NavigateForward) {
         this.ngZone.run(() => this.navCtrl.navigateForward(action.path, action.options));
-        context.setState({ state: action });
+        context.setState({ path: action.path });
     }
 
     @Action(NavigateBackward)
     navigateBack(context: StateContext<IonicRouterStateModel>, action: NavigateBackward) {
         this.ngZone.run(() => this.navCtrl.navigateBack(action.path, action.options));
-        context.setState({ state: action });
+        context.setState({ path: action.path });
     }
 
     @Action(NavigateBack)
     goBack(context: StateContext<IonicRouterStateModel>, action: NavigateBack) {
         this.ngZone.run(() => this.navCtrl.back(action.options));
-        context.setState({ state: action });
+        context.setState({ path: null });
     }
 }
