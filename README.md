@@ -1,5 +1,7 @@
 # IonicRouterPlugin for NGXS
 
+[![npm version](https://badge.fury.io/js/%40fivethree%2Fionic-router-plugin.svg)](https://www.npmjs.com/@fivethree/ionic-router-plugin)
+
 ## 📦 Installation
 
 ```bash
