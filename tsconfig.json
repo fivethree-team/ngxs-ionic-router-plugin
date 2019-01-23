@@ -18,8 +18,8 @@
       "dom"
     ],
     "paths": {
-      "@fivethree/ionic-router-plugin": [
-        "dist/@fivethree/ionic-router-plugin"
+      "@fivethree/ngxs-ionic-router-plugin": [
+        "dist/@fivethree/ngxs-ionic-router-plugin"
       ]
     }
   }

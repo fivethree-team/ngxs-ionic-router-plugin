@@ -1,14 +1,14 @@
 {
   "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
-  "defaultProject": "ionic-router-plugin",
+  "defaultProject": "ngxs-ionic-router-plugin",
   "newProjectRoot": "projects",
   "projects": {
-    "ionic-router-plugin": {
+    "ngxs-ionic-router-plugin": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "library",
-      "prefix": "ionic-router-plugin",
+      "prefix": "ngxs-ionic-router-plugin",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

@@ -1,7 +1,6 @@
-import { NavigateRoot } from './../../../src/lib/ionic-router.actions';
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { NavigateForward, NavigateBackward, NavigateBack } from '@fivethree/ionic-router-plugin';
+import { NavigateRoot, NavigateForward, NavigateBackward, NavigateBack } from '@fivethree/ngxs-ionic-router-plugin';
 
 @Component({
   selector: 'app-list',

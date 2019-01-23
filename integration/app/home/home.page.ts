@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { NavigateForward, NavigateRoot } from '@fivethree/ionic-router-plugin';
+import { NavigateForward } from '@fivethree/ngxs-ionic-router-plugin';
 
 @Component({
   selector: 'app-home',

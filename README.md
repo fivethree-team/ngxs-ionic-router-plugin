@@ -1,14 +1,14 @@
 # IonicRouterPlugin for NGXS
 
-[![npm version](https://badge.fury.io/js/%40fivethree%2Fionic-router-plugin.svg)](https://www.npmjs.com/@fivethree/ionic-router-plugin)
+[![npm version](https://badge.fury.io/js/%40fivethree%2Fngxs-ionic-router-plugin.svg)](https://www.npmjs.com/@fivethree/ngxs-ionic-router-plugin)
 
 ## 📦 Installation
 
 ```bash
-npm install @fivethree/ionic-router-plugin --save
+npm install @fivethree/ngxs-ionic-router-plugin --save
 
 # or if you are using yarn
-yarn add @fivethree/ionic-router-plugin
+yarn add @fivethree/ngxs-ionic-router-plugin
 ```
 
 ## 🔨 Usage
@@ -17,7 +17,7 @@ Import the module into your root application module:
 ```typescript
 import { NgModule } from '@angular/core';
 import { NgxsModule } from '@ngxs/store';
-import { NgxsIonicRouterPluginModule } from '@fivethree/ionic-router-plugin';
+import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin';
 
 @NgModule({
     imports: [

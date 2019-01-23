@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-import { NgxsIonicRouterPluginModule } from '@fivethree/ionic-router-plugin';
+import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin';
 
 @NgModule({
   declarations: [AppComponent],
