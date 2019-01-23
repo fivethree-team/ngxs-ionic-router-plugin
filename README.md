@@ -28,7 +28,7 @@ export class AppModule {}
 
 Now the route will be reflected in your store under the `ionicRouter` state name.
 
-## Navigation
+## 🧭 Navigation
 
 `new NavigateRoot(path: string | UrlTree | any[], options?: NavigationOptions)`
 
