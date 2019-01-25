@@ -1,6 +1,6 @@
 {
   "name": "ngxs-ionic-router-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Marc Stammerjohann",
   "description": "NGXS Ionic Router Plugin",
   "scripts": {
@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "plugin:build": "ng build ngxs-ionic-router-plugin",
-    "plugin:prod": "ng build ngxs-ionic-router-plugin --prod"
+    "plugin:prod": "ng build ngxs-ionic-router-plugin --prod",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "private": true,
   "dependencies": {
