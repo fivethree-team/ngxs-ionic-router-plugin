@@ -1,6 +1,7 @@
 # IonicRouterPlugin for NGXS
 
 [![npm version](https://badge.fury.io/js/%40fivethree%2Fngxs-ionic-router-plugin.svg)](https://www.npmjs.com/@fivethree/ngxs-ionic-router-plugin)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/fivethree-team/ngxs-ionic-router-plugin/blob/master/LICENSE)
 
 Router Plugin for Ionic 4 and NGXS 3.3.4 or higher.
 
