@@ -6,7 +6,7 @@ Router Plugin for Ionic 4 and NGXS 3.3.4 or higher.
 
 ## 📦 Installation
 
-```bash
+```console
 npm install @fivethree/ngxs-ionic-router-plugin --save
 
 # or if you are using yarn
