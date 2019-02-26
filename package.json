@@ -2,6 +2,7 @@
   "name": "ngxs-ionic-router-plugin",
   "version": "0.0.2",
   "author": "Marc Stammerjohann",
+  "homepage": "https://github.com/fivethree-team/ngxs-ionic-router-plugin",
   "description": "NGXS Ionic Router Plugin",
   "scripts": {
     "ng": "ng",
