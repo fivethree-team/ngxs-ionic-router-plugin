@@ -1,6 +1,6 @@
 {
   "name": "@fivethree/ngxs-ionic-router-plugin",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "NGXS Ionic Router Plugin",
   "keywords": [
     "fivethree",
@@ -20,7 +20,7 @@
     "url": "https://github.com/fivethree-team/ngxs-ionic-router-plugin/issues"
   },
   "peerDependencies": {
-    "@angular/core": "^6.0.0 || ^7.0.0",
+    "@angular/core": ">=7.2.1 <9.0.0",
     "@ionic/angular": "^4.0.0",
     "@ngxs/store": ">=3.3.4"
   }
