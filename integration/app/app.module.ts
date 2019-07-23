@@ -21,7 +21,7 @@ import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin
     AppRoutingModule,
     NgxsModule.forRoot([]),
     NgxsIonicRouterPluginModule.forRoot(),
-    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsReduxDevtoolsPluginModule.forRoot()
   ],
   providers: [
     StatusBar,
@@ -30,4 +30,4 @@ import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

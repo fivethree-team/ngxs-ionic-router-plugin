@@ -7,13 +7,13 @@ import { IonicRouterState } from './ionic-router.state';
 // export const NgxsModuleRouterState = NgxsModule.forFeature([IonicRouterState]);
 
 @NgModule({
-    imports: [NgxsModule.forFeature([IonicRouterState])]
+  imports: [NgxsModule.forFeature([IonicRouterState])]
 })
 export class NgxsIonicRouterPluginModule {
-    static forRoot(): ModuleWithProviders {
-        return {
-            ngModule: NgxsIonicRouterPluginModule,
-            providers: []
-        };
-    }
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: NgxsIonicRouterPluginModule,
+      providers: []
+    };
+  }
 }

@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { NavigateRoot, NavigateBackward, NavigateBack } from '@fivethree/ngxs-ionic-router-plugin';
+import {
+  NavigateRoot,
+  NavigateBackward,
+  NavigateBack
+} from '@fivethree/ngxs-ionic-router-plugin';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
-  styleUrls: ['./details.page.scss'],
+  styleUrls: ['./details.page.scss']
 })
 export class DetailsPage {
-
-  constructor(private store: Store) { }
+  constructor(private store: Store) {}
 
   onNavigateRootClick() {
     this.store.dispatch(new NavigateRoot('home'));
