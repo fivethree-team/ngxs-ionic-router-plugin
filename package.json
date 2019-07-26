@@ -1,5 +1,5 @@
 {
-  "name": "ngxs-ionic-router-plugin",
+  "name": "@fivethree/ngxs-ionic-router-plugin",
   "version": "0.1.0",
   "author": "Marc Stammerjohann",
   "description": "NGXS Ionic Router Plugin",
