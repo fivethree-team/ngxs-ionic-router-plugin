@@ -5,6 +5,11 @@
 
 Router Plugin for Ionic 4 and NGXS 3.3.4 or higher.
 
+| Angular | @ngxs/store | ionic  | @fivethree/@fivethree/ngxs-ionic-router-plugin |
+| ------- | ----------- | ------ | ---------------------------------------------- |
+| 8/9     | 3.6.x+      | 4.x.x+ | 0.2.x+                                         |
+| 7       | 3.3.4+      | 4.x.x+ | 0.1.0                                          |
+
 ## 📦 Installation
 
 ```console
@@ -15,6 +20,7 @@ yarn add @fivethree/ngxs-ionic-router-plugin
 ```
 
 ## 🔨 Usage
+
 Import the module into your root application module:
 
 ```typescript
@@ -23,10 +29,7 @@ import { NgxsModule } from '@ngxs/store';
 import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin';
 
 @NgModule({
-    imports: [
-        NgxsModule.forRoot(states),
-        NgxsIonicRouterPluginModule.forRoot()
-    ]
+  imports: [NgxsModule.forRoot(states), NgxsIonicRouterPluginModule.forRoot()]
 })
 export class AppModule {}
 ```
@@ -42,5 +45,3 @@ Now the route will be reflected in your store under the `ionicRouter` state name
 `new NavigateBackward(path: string | UrlTree | any[], options?: NavigationOptions)`
 
 `new NavigateBack(options?: AnimationOptions)`
-
-
