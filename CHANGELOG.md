@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/fivethree-team/ngxs-ionic-router-plugin/compare/v0.2.0...v0.3.0) (2020-02-13)
+
+
+### Features
+
+* **ionic:** update to ionic 5 ([273ccf3](https://github.com/fivethree-team/ngxs-ionic-router-plugin/commit/273ccf32bc3d681b44b42b30cd819d716acec4b6))
+
+
+
 # [0.2.0](https://github.com/fivethree-team/ngxs-ionic-router-plugin/compare/0.1.0...0.2.0) (2020-01-16)
 
 
