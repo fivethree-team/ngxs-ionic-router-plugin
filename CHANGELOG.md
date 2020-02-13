@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/fivethree-team/ngxs-ionic-router-plugin/compare/v0.3.0...v0.3.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* **state:** add injectable to state for angular 9 ([da18d75](https://github.com/fivethree-team/ngxs-ionic-router-plugin/commit/da18d75429ba2dc2c682600560766cde6a420920))
+
+
+
 # [0.3.0](https://github.com/fivethree-team/ngxs-ionic-router-plugin/compare/v0.2.0...v0.3.0) (2020-02-13)
 
 
