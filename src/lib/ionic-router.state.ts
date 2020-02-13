@@ -1,6 +1,6 @@
 import { State, Action, StateContext } from '@ngxs/store';
 import { NavController } from '@ionic/angular';
-import { NgZone } from '@angular/core';
+import { NgZone, Injectable } from '@angular/core';
 import {
   NavigateRoot,
   NavigateForward,
@@ -18,6 +18,7 @@ export interface IonicRouterStateModel {
     path: undefined
   }
 })
+@Injectable()
 export class IonicRouterState {
   constructor(private navCtrl: NavController, private ngZone: NgZone) {}
 
