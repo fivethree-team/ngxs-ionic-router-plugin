@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/fivethree-team/ngxs-ionic-router-plugin/compare/v0.3.1...v0.3.2) (2020-04-23)
+
+
+### Bug Fixes
+
+* **import:** remove deep import too @ionic/angular ([ffb9b5e](https://github.com/fivethree-team/ngxs-ionic-router-plugin/commit/ffb9b5e810370830a7229a5a9a9acedbbe61acf9))
+
+
+
 ## [0.3.1](https://github.com/fivethree-team/ngxs-ionic-router-plugin/compare/v0.3.0...v0.3.1) (2020-02-13)
 
 
