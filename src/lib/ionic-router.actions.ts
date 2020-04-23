@@ -1,8 +1,5 @@
 import { UrlTree } from '@angular/router';
-import {
-  NavigationOptions,
-  AnimationOptions
-} from '@ionic/angular/providers/nav-controller';
+import { NavigationOptions, AnimationOptions } from './symbols';
 
 export class NavigateRoot {
   static readonly type = '[Router] NavigateRoot';
