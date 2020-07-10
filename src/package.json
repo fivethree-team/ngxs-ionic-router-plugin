@@ -20,7 +20,7 @@
     "url": "https://github.com/fivethree-team/ngxs-ionic-router-plugin/issues"
   },
   "peerDependencies": {
-    "@angular/core": ">=8.0.0 <10.0.0",
+    "@angular/core": ">=8.0.0 <11.0.0",
     "@ionic/angular": "^5.0.0",
     "@ngxs/store": ">=3.6.0"
   }
