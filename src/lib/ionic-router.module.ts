@@ -10,7 +10,7 @@ import { IonicRouterState } from './ionic-router.state';
   imports: [NgxsModule.forFeature([IonicRouterState])]
 })
 export class NgxsIonicRouterPluginModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<NgxsIonicRouterPluginModule> {
     return {
       ngModule: NgxsIonicRouterPluginModule,
       providers: []
