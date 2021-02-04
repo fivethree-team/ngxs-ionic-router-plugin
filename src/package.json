@@ -1,6 +1,6 @@
 {
   "name": "@fivethree/ngxs-ionic-router-plugin",
-  "version": "0.3.2",
+  "version": "1.0.0-dev.0",
   "description": "NGXS Ionic Router Plugin",
   "keywords": [
     "fivethree",
