@@ -1,19 +1,24 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { NgxsModule } from '@ngxs/store';
 import { IonicRouterState } from './ionic-router.state';
-
-// NOTE: Must mark as `dynamic` due to
-// https://github.com/dherges/ng-packagr/issues/767
-// export const NgxsModuleRouterState = NgxsModule.forFeature([IonicRouterState]);
+import {
+  DefaultRouterStateSerializer,
+  RouterStateSerializer,
+} from './serializer';
 
 @NgModule({
-  imports: [NgxsModule.forFeature([IonicRouterState])]
+  imports: [NgxsModule.forFeature([IonicRouterState])],
 })
 export class NgxsIonicRouterPluginModule {
   static forRoot(): ModuleWithProviders<NgxsIonicRouterPluginModule> {
     return {
       ngModule: NgxsIonicRouterPluginModule,
-      providers: []
+      providers: [
+        {
+          provide: RouterStateSerializer,
+          useClass: DefaultRouterStateSerializer,
+        },
+      ],
     };
   }
 }

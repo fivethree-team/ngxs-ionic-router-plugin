@@ -3,13 +3,13 @@ import { Store } from '@ngxs/store';
 import {
   NavigateRoot,
   NavigateBackward,
-  NavigateBack
+  NavigateBack,
 } from '@fivethree/ngxs-ionic-router-plugin';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
-  styleUrls: ['./details.page.scss']
+  styleUrls: ['./details.page.scss'],
 })
 export class DetailsPage {
   constructor(private store: Store) {}
