@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin';
-import { IonicRouterStateSerializer } from '@fivethree/ngxs-ionic-router-plugin';
+import { RouterStateSerializer } from '@fivethree/ngxs-ionic-router-plugin';
 
 interface RouterStateParams {
   root: {
@@ -27,7 +27,7 @@ interface RouterStateParams {
 }
 
 class CustomRouterStateSerializer
-  implements IonicRouterStateSerializer<RouterStateParams> {
+  implements RouterStateSerializer<RouterStateParams> {
   serialize(routerState: RouterStateSnapshot): RouterStateParams {
     const {
       url,
@@ -61,7 +61,7 @@ class CustomRouterStateSerializer
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
-      provide: IonicRouterStateSerializer,
+      provide: RouterStateSerializer,
       useClass: CustomRouterStateSerializer,
     },
   ],

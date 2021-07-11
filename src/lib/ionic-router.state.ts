@@ -27,7 +27,7 @@ import {
   NavigateForward,
   NavigateRoot,
 } from './ionic-router.actions';
-import { IonicRouterStateSerializer } from './serializer';
+import { RouterStateSerializer } from './serializer';
 import { NavController } from '@ionic/angular';
 
 export interface IonicRouterStateModel<T = RouterStateSnapshot> {
@@ -88,7 +88,7 @@ export class IonicRouterState implements OnDestroy {
     private _store: Store,
     private _router: Router,
     private _navCtrl: NavController,
-    private _serializer: IonicRouterStateSerializer<RouterStateSnapshot>,
+    private _serializer: RouterStateSerializer<RouterStateSnapshot>,
     private _ngZone: NgZone,
     private _urlSerializer: UrlSerializer,
     private _locationStrategy: LocationStrategy,

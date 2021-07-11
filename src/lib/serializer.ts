@@ -1,6 +1,6 @@
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-export abstract class IonicRouterStateSerializer<T> {
+export abstract class RouterStateSerializer<T> {
   abstract serialize(routerState: RouterStateSnapshot): T;
 }
 
@@ -10,7 +10,7 @@ export interface SerializedRouterStateSnapshot {
 }
 
 export class DefaultRouterStateSerializer
-  implements IonicRouterStateSerializer<SerializedRouterStateSnapshot> {
+  implements RouterStateSerializer<SerializedRouterStateSnapshot> {
   serialize(routerState: RouterStateSnapshot): SerializedRouterStateSnapshot {
     return {
       root: this.serializeRoute(routerState.root),

@@ -3,7 +3,7 @@ import { NgxsModule } from '@ngxs/store';
 import { IonicRouterState } from './ionic-router.state';
 import {
   DefaultRouterStateSerializer,
-  IonicRouterStateSerializer,
+  RouterStateSerializer,
 } from './serializer';
 
 @NgModule({
@@ -15,7 +15,7 @@ export class NgxsIonicRouterPluginModule {
       ngModule: NgxsIonicRouterPluginModule,
       providers: [
         {
-          provide: IonicRouterStateSerializer,
+          provide: RouterStateSerializer,
           useClass: DefaultRouterStateSerializer,
         },
       ],
