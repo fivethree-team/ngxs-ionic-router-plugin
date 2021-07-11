@@ -14,10 +14,10 @@ import { ListPage } from './list.page';
     RouterModule.forChild([
       {
         path: '',
-        component: ListPage
-      }
-    ])
+        component: ListPage,
+      },
+    ]),
   ],
-  declarations: [ListPage]
+  declarations: [ListPage],
 })
 export class ListPageModule {}

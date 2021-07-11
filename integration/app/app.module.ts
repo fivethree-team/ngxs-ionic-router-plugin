@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import {
+  Params,
+  RouteReuseStrategy,
+  RouterStateSnapshot,
+} from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -11,6 +15,35 @@ import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin';
+import { IonicRouterStateSerializer } from '@fivethree/ngxs-ionic-router-plugin';
+
+interface RouterStateParams {
+  root: {
+    url: string;
+    params: Params;
+    queryParams: Params;
+    data: any;
+  };
+}
+
+class CustomRouterStateSerializer
+  implements IonicRouterStateSerializer<RouterStateParams> {
+  serialize(routerState: RouterStateSnapshot): RouterStateParams {
+    const {
+      url,
+      root: { queryParams },
+    } = routerState;
+
+    let { root: route } = routerState;
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+
+    const { params, data } = route;
+
+    return { root: { url, params, queryParams, data } };
+  }
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,13 +54,17 @@ import { NgxsIonicRouterPluginModule } from '@fivethree/ngxs-ionic-router-plugin
     AppRoutingModule,
     NgxsModule.forRoot([]),
     NgxsIonicRouterPluginModule.forRoot(),
-    NgxsReduxDevtoolsPluginModule.forRoot()
+    NgxsReduxDevtoolsPluginModule.forRoot(),
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {
+      provide: IonicRouterStateSerializer,
+      useClass: CustomRouterStateSerializer,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

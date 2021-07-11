@@ -4,13 +4,13 @@ import {
   NavigateRoot,
   NavigateForward,
   NavigateBackward,
-  NavigateBack
-} from '@fivethree/ngxs-ionic-router-plugin';
+  NavigateBack,
+} from '../../../src/lib/ionic-router.actions';
 
 @Component({
   selector: 'app-list',
   templateUrl: 'list.page.html',
-  styleUrls: ['list.page.scss']
+  styleUrls: ['list.page.scss'],
 })
 export class ListPage {
   constructor(private store: Store) {}
